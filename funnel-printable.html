@@ -1,0 +1,230 @@
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:system-ui,-apple-system,sans-serif;background:#fff;color:#1a1a1a;padding:40px 20px}
+.page{max-width:900px;margin:0 auto}
+h1{font-size:22px;font-weight:600;text-align:center;margin-bottom:4px}
+h2{font-size:14px;font-weight:400;text-align:center;color:#666;margin-bottom:40px}
+h3{font-size:16px;font-weight:600;margin:50px 0 20px;padding-bottom:8px;border-bottom:2px solid #1a1a1a}
+.flow{display:flex;flex-direction:column;align-items:center;gap:0;position:relative}
+.email-row{display:flex;align-items:center;justify-content:center;width:100%;position:relative;min-height:60px}
+.email-box{background:#7F77DD;color:#fff;padding:10px 20px;border-radius:8px;text-align:center;min-width:200px;z-index:2}
+.email-box .name{font-weight:600;font-size:14px}
+.email-box .sub{font-size:11px;opacity:.85;margin-top:2px}
+.start-box{background:#888;color:#fff;padding:8px 20px;border-radius:8px;text-align:center;font-weight:600;font-size:13px;min-width:180px}
+.delay{color:#888;font-size:11px;padding:6px 0;text-align:center}
+.arrow-down{width:2px;height:16px;background:#888;margin:0 auto}
+.branch-left{position:absolute;right:calc(50% + 115px);top:50%;display:flex;align-items:center;gap:6px;transform:translateY(-50%)}
+.branch-right{position:absolute;left:calc(50% + 115px);top:50%;display:flex;align-items:center;gap:6px;transform:translateY(-50%)}
+.branch-label{font-size:10px;color:#555;white-space:nowrap}
+.branch-box{padding:5px 10px;border-radius:6px;font-size:10px;font-weight:500;white-space:nowrap}
+.teal{background:#E1F5EE;color:#085041;border:1px solid #5DCAA5}
+.coral{background:#FAECE7;color:#712B13;border:1px solid #F0997B}
+.hot{background:#FFF3E0;color:#854F0B;font-size:9px;padding:2px 6px;border-radius:4px;margin-left:4px;font-weight:600}
+.section{margin:30px 0;padding:20px;border-radius:12px;border:1px solid #e0e0e0}
+.section-title{font-weight:600;font-size:14px;margin-bottom:12px}
+.path-flow{display:flex;flex-direction:column;align-items:center;gap:0}
+.path-box{padding:8px 16px;border-radius:6px;text-align:center;font-size:12px;min-width:180px}
+.green-box{background:#EAF3DE;color:#27500A;border:1px solid #97C459}
+.amber-box{background:#FAEEDA;color:#633806;border:1px solid #FAC775}
+.pink-box{background:#FBEAF0;color:#72243E;border:1px solid #ED93B1}
+.coral-box{background:#FAECE7;color:#712B13;border:1px solid #F0997B}
+.gray-box{background:#F1EFE8;color:#2C2C2A;border:1px solid #B4B2A9}
+.sm-arrow{width:2px;height:12px;background:#aaa;margin:0 auto}
+.split{display:flex;gap:30px;justify-content:center;margin-top:0}
+.split-col{display:flex;flex-direction:column;align-items:center;gap:0}
+.split-label{font-size:11px;font-weight:600;color:#555;margin-bottom:4px}
+.legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:20px}
+.legend-item{display:flex;align-items:center;gap:6px;font-size:11px}
+.legend-dot{width:14px;height:14px;border-radius:4px}
+.tone-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.tone-card{padding:12px;border-radius:8px;border:1px solid #5DCAA5;background:#E1F5EE}
+.tone-card h4{font-size:12px;font-weight:600;color:#085041;margin-bottom:4px}
+.tone-card p{font-size:11px;color:#085041;line-height:1.4}
+</style>
+<div class="page">
+<h1>Construction email sequence — automation funnel</h1>
+<h2>Twomey Dispute Lawyers | 7 emails over 30 days</h2>
+
+<div class="flow">
+
+<div class="start-box">Meta leads</div>
+<div class="arrow-down"></div>
+<div class="start-box">Enrol in email sequence</div>
+<div class="arrow-down"></div>
+
+<!-- Email 1 -->
+<div class="email-row">
+<div class="branch-left"><div class="branch-box teal">Pause + respond</div><div class="branch-label">← Reply?</div></div>
+<div class="email-box"><div class="name">Email 1 — Day 1</div><div class="sub">The opener</div></div>
+</div>
+<div class="delay">▼ Delay 3 days</div>
+
+<!-- Email 2 -->
+<div class="email-row">
+<div class="branch-left"><div class="branch-box teal">Pause + respond</div><div class="branch-label">← Reply?</div></div>
+<div class="email-box"><div class="name">Email 2 — Day 3</div><div class="sub">The wake-up call</div></div>
+</div>
+<div class="delay">▼ Delay 4 days</div>
+
+<!-- Email 3 -->
+<div class="email-row">
+<div class="branch-left"><div class="branch-box teal">Pause + respond</div><div class="branch-label">← Reply?</div></div>
+<div class="email-box"><div class="name">Email 3 — Day 7</div><div class="sub">The value email</div></div>
+</div>
+<div class="delay">▼ Delay 3 days</div>
+
+<!-- Email 4 -->
+<div class="email-row">
+<div class="branch-left"><div class="branch-box teal">Pause — hot lead</div><div class="branch-label">← Reply?</div></div>
+<div class="email-box"><div class="name">Email 4 — Day 10</div><div class="sub">The pitch — $49/month</div></div>
+<div class="branch-right"><div class="branch-label">Clicks link? →</div><div class="branch-box coral">Wait 24h → nudge</div></div>
+</div>
+<div class="delay">▼ Delay 8 days</div>
+
+<!-- Email 5 -->
+<div class="email-row">
+<div class="branch-left"><div class="branch-box teal">Pause — hot lead</div><div class="branch-label">← Reply?</div></div>
+<div class="email-box"><div class="name">Email 5 — Day 18</div><div class="sub">The proof</div></div>
+<div class="branch-right"><div class="branch-label">Clicks link? →</div><div class="branch-box coral">Wait 24h → nudge</div></div>
+</div>
+<div class="delay">▼ Delay 5 days</div>
+
+<!-- Email 6 -->
+<div class="email-row">
+<div class="branch-left"><div class="branch-box teal">Pause — very hot</div><div class="branch-label">← Reply?</div></div>
+<div class="email-box"><div class="name">Email 6 — Day 23</div><div class="sub">The objection killer</div></div>
+<div class="branch-right"><div class="branch-label">Clicks link? →</div><div class="branch-box coral">Wait 24h → nudge</div></div>
+</div>
+<div class="delay">▼ Delay 7 days</div>
+
+<!-- Email 7 -->
+<div class="email-row">
+<div class="branch-left"><div class="branch-box teal">Pause — hottest</div><div class="branch-label">← Reply?</div></div>
+<div class="email-box"><div class="name">Email 7 — Day 30</div><div class="sub">The close</div></div>
+<div class="branch-right"><div class="branch-label">Clicks link? →</div><div class="branch-box coral">Wait 24h → nudge</div></div>
+</div>
+<div class="arrow-down"></div>
+
+<div class="start-box">Monthly nurture</div>
+</div>
+
+<!-- ACTION PATHS -->
+<h3>What happens when they take action</h3>
+
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+
+<!-- Subscribes -->
+<div class="section" style="border-color:#97C459">
+<div class="section-title" style="color:#27500A">Subscribes (at any point)</div>
+<div class="path-flow">
+<div class="path-box green-box">Remove from sequence</div>
+<div class="sm-arrow"></div>
+<div class="path-box green-box" style="font-weight:600">Onboarding email<br><span style="font-weight:400;font-size:11px">"You're in. Here's what happens next."</span></div>
+<div class="sm-arrow"></div>
+<div class="path-box green-box">Book discovery call</div>
+<div class="sm-arrow"></div>
+<div class="path-box green-box">Dedicated lawyer assigned</div>
+</div>
+</div>
+
+<!-- Goes cold -->
+<div class="section" style="border-color:#FAC775">
+<div class="section-title" style="color:#633806">Goes cold (no opens 14+ days)</div>
+<div class="path-flow">
+<div class="path-box amber-box">Send re-engagement email<br><span style="font-size:11px">"Still there?"</span></div>
+<div class="sm-arrow"></div>
+<div class="path-box amber-box" style="font-weight:600">Did they open?</div>
+<div style="height:8px"></div>
+<div class="split">
+<div class="split-col">
+<div class="split-label">Yes</div>
+<div class="path-box amber-box">Resume sequence</div>
+</div>
+<div class="split-col">
+<div class="split-label">No</div>
+<div class="path-box amber-box">Skip to Email 7<br>→ monthly nurture</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Books consultation -->
+<div class="section" style="border-color:#ED93B1">
+<div class="section-title" style="color:#72243E">Books consultation (at any point)</div>
+<div class="path-flow">
+<div class="path-box pink-box">Remove from sequence</div>
+<div class="sm-arrow"></div>
+<div class="path-box pink-box">Consultation pipeline</div>
+<div class="sm-arrow"></div>
+<div class="path-box pink-box" style="font-weight:600">Did they subscribe?</div>
+<div style="height:8px"></div>
+<div class="split">
+<div class="split-col">
+<div class="split-label">Yes</div>
+<div class="path-box green-box">Onboarding</div>
+</div>
+<div class="split-col">
+<div class="split-label">No</div>
+<div class="path-box pink-box">Re-enrol at Email 5<br>(after 7 days)</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- CLICK NUDGE DETAIL -->
+<div class="section" style="border-color:#F0997B">
+<div class="section-title" style="color:#712B13">Nudge email (sent after link click, no subscribe within 24h)</div>
+<div class="path-flow">
+<div class="path-box coral-box">Subject: "Quick one — did you have any questions?"</div>
+<div class="sm-arrow"></div>
+<div class="path-box coral-box" style="font-weight:600">Did they subscribe?</div>
+<div style="height:8px"></div>
+<div class="split">
+<div class="split-col">
+<div class="split-label">Yes</div>
+<div class="path-box green-box">Onboarding</div>
+</div>
+<div class="split-col">
+<div class="split-label">No</div>
+<div class="path-box coral-box">Resume sequence<br>from next email</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- REPLY TONE GUIDE -->
+<h3>Reply response tone guide</h3>
+<div class="tone-grid">
+<div class="tone-card">
+<h4>Emails 1–3 replies</h4>
+<p>Warm but soft. Listen first. Don't pitch yet. Build trust. Resume from next email after 3 days if conversation fizzles.</p>
+</div>
+<div class="tone-card">
+<h4>Emails 4–5 replies</h4>
+<p>Hot lead. Answer their questions directly. Guide toward the signup link. Resume after 3-5 days if fizzles.</p>
+</div>
+<div class="tone-card">
+<h4>Emails 6–7 replies</h4>
+<p>Hottest leads. They've been reading for weeks. Make it easy. Send the link directly. Move to monthly nurture if fizzles.</p>
+</div>
+<div class="tone-card" style="background:#F1EFE8;border-color:#B4B2A9">
+<h4 style="color:#2C2C2A">All replies — rules</h4>
+<p style="color:#444">Respond within 1 hour. Pause the sequence immediately. Log in HubSpot — tag which email triggered the reply.</p>
+</div>
+</div>
+
+<!-- LEGEND -->
+<h3>Colour key</h3>
+<div class="legend">
+<div class="legend-item"><div class="legend-dot" style="background:#7F77DD"></div>Main sequence emails</div>
+<div class="legend-item"><div class="legend-dot" style="background:#5DCAA5"></div>Reply path (pause + respond)</div>
+<div class="legend-item"><div class="legend-dot" style="background:#F0997B"></div>Click nudge (wait 24h)</div>
+<div class="legend-item"><div class="legend-dot" style="background:#97C459"></div>Subscribed (onboarding)</div>
+<div class="legend-item"><div class="legend-dot" style="background:#FAC775"></div>Gone cold (re-engage)</div>
+<div class="legend-item"><div class="legend-dot" style="background:#ED93B1"></div>Consultation (pipeline)</div>
+<div class="legend-item"><div class="legend-dot" style="background:#888"></div>Start / end points</div>
+</div>
+
+<p style="margin-top:30px;font-size:11px;color:#999;text-align:center">Twomey Dispute Lawyers | Construction Email Sequence Automation Funnel | Confidential</p>
+</div>
